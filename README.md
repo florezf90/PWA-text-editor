@@ -18,14 +18,28 @@
 <h1>👩‍💻 About </h1>
 </div>
 
-In order to practice the new skilled acquired in the bootcamp weekly class, in the current application is created with the intention to  serve as the foundation for a full-stack social network application. It utilizes a MongoDB database, Express.js routing, and the Mongoose ODM. The initial set of CRUD API routes are established to support various functionalities, including user creation, search, update, and deletion. Users can share their thoughts, react to thoughts from friends, create a friend list, and perform actions such as deleting thoughts, reactions, friends, and their own user account.
+The current app has been created with the intention of  practicing PWA concepts and get more familiar with them, this was possible by providing to the community with a text editor that can be used as a PWA, allowing the user to actually download the application and being able to use it offline. In order to achieve this, There are four main concepts this application focuses on:
 
 
-
-
-
-    ### Note: It is also important to highlight that the current project has been developed following the patterns and technologies suggested by the edX UTSA coding bootcamp
+### 1 First:
+ Configuring the webpack.config.js file with the necessary workbox plugins for service worker and manifest files, and adding CSS and babel loader (enabling the CSS and JavaScript to compile on devices running on older legacy code i.e. ES5).
  
+ 
+### 2 Second:
+
+Implementing asset caching within the src-sw.js file giving the application offline functionality. 
+
+
+
+### 3 Third:
+Configuring the database, so that data can be added, updated and retrieved from the IndexedDB.
+
+
+### 4 Fourth:
+
+ Adding the addition of event handlers to our install button, so that the application can be installed to each users personal application stack and be used offline.
+
+    Note: please be advised that most of the existing code in the present application has been provided by the UTSA coding bootcamp program, my main job for this application was to implement the PWA pattern.
 ----------------------
 
 <details>
@@ -36,7 +50,6 @@ In order to practice the new skilled acquired in the bootcamp weekly class, in t
         <li><a  href="#built-with">Built With</a></li>
     </li>
     <li><a  href="#Installation">Installation</a></li>
-    <li><a  href="#usage">Usage</a></li>
     <li><a  href="#contributing">Contributing and Contact</a></li>
     <li><a  href="#ack">Acknowledgments</a></li>
     <li><a  href="#license" >License</a></li>
@@ -53,14 +66,17 @@ In order to practice the new skilled acquired in the bootcamp weekly class, in t
 </div>
 
 
-* [![NVC pattern](https://img.shields.io/badge/NVC%20pattern-white?style=for-the-badge&logo=npm&logoColor=black&link=https://www.geeksforgeeks.org/mvc-design-pattern/)](https://www.geeksforgeeks.org/mvc-design-pattern/)
+* [![PWA pattern](https://img.shields.io/badge/PWA%20pattern-white?style=for-the-badge&logo=npm&logoColor=black&link=https://www.geeksforgeeks.org/mvc-design-pattern/)](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/)
 
-* [![LUXON](https://img.shields.io/badge/LUXON-red?style=for-the-badge&logo=node.js&logoColor=white&link=https://www.npmjs.com/package/luxon)](https://www.npmjs.com/package/luxon)
+* [![webpack](https://img.shields.io/badge/webpack-blue?style=for-the-badge&logo=node.js&logoColor=white&link=https://www.npmjs.com/package/webpack#install)](https://www.npmjs.com/package/webpack#install)
 
 * [![Express.js](https://img.shields.io/badge/Express-000000.svg?style=for-the-badge&logo=Express&logoColor=white)](https://expressjs.com/en/4x/api.html)
 
-* [![Mongoose](https://img.shields.io/badge/Mongoose-000000.svg?style=for-the-badge&logo=Mongoose&logoColor=white)](https://mongoosejs.com/)
+* [![node](https://img.shields.io/badge/node-green?style=for-the-badge&logo=node.js&logoColor=white&link=https://www.npmjs.com/package/node)](https://www.npmjs.com/package/node)
 
+* [![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript&logoColor=white&link=https://developer.mozilla.org/en-US/docs/Web/JavaScript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+* [![babel](https://img.shields.io/badge/babel-red?style=for-the-badge&logo=babel&logoColor=white&link=https://www.npmjs.com/package/@babel/core)](https://www.npmjs.com/package/@babel/core)
 
 ---------------------------------
 
@@ -70,13 +86,13 @@ In order to practice the new skilled acquired in the bootcamp weekly class, in t
 </div>
 
 
-💿 live demo link:  https://www.youtube.com/watch?v=OdivWHBff-E/ 
+💿 live demo link:  https://florezf90-pwa.onrender.com/
 
 To use this app in a local envirioment, please follow these steps:
 
 First, clone the  repository by following the next steps:
 
-      git clone git@github.com:florezf90/Social-network-API.git
+      git clone git@github.com:florezf90/PWA-text-editor.git
 
 2.Second, initialize the node packages by running:
 
@@ -84,34 +100,29 @@ First, clone the  repository by following the next steps:
 
 3.third, please seed the database by running the following command:
 
-     npm run seed
+     npm run start:dev
 
       
 Once done, your command line should look like this:
 
-![seed screenshot](./src/IMG/Screenshot%202024-01-07%20012145.png)
+![application run screenshot](./client/src/images/Screenshot%202024-01-16%20015832.png)
 
 
-4.Launch the app by running:
+4.Launch the app by typing to the web browser:
 
 
-     node index.js
+     http://localhost:3000
 
 
-once done, it is advised to test the API calls on insomia, as shown in the following example:
+once done, you'll get something like this:
 
 
 
- ![insomia screenshot](./src/IMG/Screenshot%202024-01-07%20011657.png)
+ ![insomia screenshot](./client/src/images/Screenshot%202024-01-16%20020224.png)
+
+ ### To test the offline feature, please hit the install button in the top left corner.
 
  -----------------------------
-
- <div id="usage" align="center">
-<h1>📖 Usage </h1>
-</div>
-
-
-
 
 
 -------- 
@@ -128,7 +139,6 @@ If you have any questions, reach to:
 
  ✉️ mail: florezf90@gmail.com 
  
- 💿 Demo:  https://www.youtube.com/watch?v=OdivWHBff-E
 
 ----------------
 
@@ -136,11 +146,9 @@ If you have any questions, reach to:
 <h1>🏆 Acknowledgments </h1>
 </div>
 
+*  [![github](https://img.shields.io/badge/github-florezf90-black?labelColor=black&style=for-the-badge&logo=github&logoColor=white&link=https://github.com/florezf90)](https://github.com/florezf90) 
 
-  * Luis florez (florezf90) 
-
-  main responsible for website layout, design  and front end code logic
-  
+         Note: please refer to the 'Built it section' for more information about the docs on the technologies used in the project.   
   
 -----
 
